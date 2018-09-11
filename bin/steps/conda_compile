@@ -9,12 +9,12 @@ if [ -e $RUNTIME ]; then
     else
         PYTHON_MAJOR_VERSION=""
     fi
-    MINICONDA_FILE="Miniconda$PYTHON_MAJOR_VERSION-latest-Linux-x86_64.sh"
+    MINICONDA_FILE="Miniconda$PYTHON_MAJOR_VERSION-4.5.4-Linux-x86_64.sh"
 else
-    MINICONDA_FILE="Miniconda-latest-Linux-x86_64.sh"
+    MINICONDA_FILE="Miniconda-4.5.4-Linux-x86_64.sh"
 fi
 
-MINICONDA_URI="http://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh"
+MINICONDA_URI="http://repo.continuum.io/miniconda/$MINICONDA_FILE"
 
 if [ ! -d /app/.heroku/miniconda ]; then
     puts-step "Preparing Python/Miniconda Environment (${MINICONDA_URI})"
